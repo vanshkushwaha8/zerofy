@@ -17,7 +17,7 @@ const CTA = () => {
   const data = { name, email, resume };
 
   try {
-    const response = await fetch('https://script.google.com/macros/s/AKfycbw0uGCNMqVrx2ApotnOzZVZSmDAE6YjU5ZhKKd2P_ox-vz_9SGxp-AIwMjrZ6XDlMKEhA/exec', {
+    const response = await fetch('https://zerofy-backend.onrender.com/submit', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
