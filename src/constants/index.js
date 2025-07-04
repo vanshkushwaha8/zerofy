@@ -11,9 +11,17 @@ import {
   coinbase, 
   dropbox, 
   send, 
+  // sneha,
+  // vikas,
+  // rahul,
+  // ayesha,
   shield, 
   star
 } from "../assets";
+import sneha from '../assets/sneha.jpg';
+import rahul from '../assets/rahul.jpg';
+import ayesha from '../assets/ayesha.jpg';
+import vikas from '../assets/vikas.jpg';
 
 export const navLinks = [
   {
@@ -38,56 +46,49 @@ export const navLinks = [
   },
 ];
 
-export const features = [
-  {
-    id: "feature-1",
-    icon: star,
-    title: " Innovative Solutions",
-    content:
-      "We craft custom-built digital products designed to solve real-world problems and give your business a competitive edge.",
-  },
-  {
-    id: "feature-2",
-    icon: shield,
-    title: "Secure by Design",
-    content:
-      "From architecture to deployment, we ensure your platforms are protected with top-tier security standards.",
-  },
-  {
-    id: "feature-3",
-    icon: send,
-    title: "Scalable Technology",
-    content:
-      "Our systems grow with you — ready to support your journey from startup to enterprise without limits.",
-  },
-];
-
 export const feedback = [
   {
     id: "feedback-1",
-    content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
     name: "Herman Jensen",
-    title: "Founder & Leader",
-    img: people01,
+    title: "CEO, CleanGo Services",
+    project: "Cleaner Service",
+    work: "Developed a modern, real-time service booking platform with admin and user dashboards.",
+    content:
+      "The team created an incredible cleaning service app. It works smoothly across devices and made booking so much easier for our clients.",
+    img: sneha,
   },
   {
     id: "feedback-2",
-    content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
     name: "Steve Mark",
-    title: "Founder & Leader",
-    img: people02,
+    title: "Founder, ZestyBites",
+    project: "Restaurant Review",
+    work: "Built an engaging review-based platform with rich content, live ratings, and filters for food lovers.",
+    content:
+      "Absolutely loved how they turned my vision into a sleek, functional review platform. It’s beautiful and engaging!",
+    img: vikas,
   },
   {
     id: "feedback-3",
-    content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Kenn Gallagher",
-    title: "Founder & Leader",
-    img: people03,
+    title: "CTO, KiranaKart",
+    project: "Online Kirana Store",
+    work: "Engineered a scalable e-commerce system with inventory sync, cart functionality, and order tracking.",
+    content:
+      "A solid team that delivered a kirana store that runs like a charm! Our customers are loving the seamless shopping experience.",
+    img: rahul,
+  },
+  {
+    id: "feedback-4",
+    name: "Sneha Reddy",
+    title: "Fitness Coach & App Owner",
+    project: "Smart Gym Tracker",
+    work: "Created a fitness tracker with personalized plans, daily logs, and performance insights using React Native.",
+    content:
+      "The fitness app they built has elevated my coaching business. Clients track workouts daily and love the personalized plans!",
+    img: ayesha, 
   },
 ];
+
 
 export const stats = [
   {

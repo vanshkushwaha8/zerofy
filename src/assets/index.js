@@ -25,8 +25,24 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
+import cleaner from "./cleaner.jpg";
+import restaurant from "./restaurant.jpg";
+import kirana from "./kirana.png";
+import gym from "./gym.jpg";
+import sneha from "./sneha.jpg";
+import vikas from "./vikas.jpg";  
+import rahul from "./rahul.jpg";
+import ayesha from "./ayesha.jpg";
 
 export {
+  sneha,
+  vikas,
+  rahul,
+  ayesha,
+  cleaner,
+  restaurant,
+  kirana,
+  gym,
   airbnb,
   bill,
   binance,
