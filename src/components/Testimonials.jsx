@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import { feedback } from '../constants';
 import styles from '../style';
 import { FaStar } from 'react-icons/fa';
 
-const ClientCard = ({ name, title, content, img, project, work }) => {
+// Memoized ClientCard to prevent re-renders
+const ClientCard = memo(({ name, title, content, img, project, work }) => {
   return (
     <div className="flex flex-col md:w-[45%] w-full bg-black-gradient-2 rounded-xl p-6 m-3 shadow-lg hover:scale-[1.02] transition-transform duration-300">
       <div className="flex items-center mb-4">
-        <img src={img} alt={name} className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-white" />
+        <img
+          src={img}
+          alt={name}
+          className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-white"
+          loading="lazy"
+        />
         <div>
           <h4 className="text-white font-semibold text-lg">{name}</h4>
           <p className="text-dimWhite text-sm">{title}</p>
@@ -23,21 +29,44 @@ const ClientCard = ({ name, title, content, img, project, work }) => {
       </div>
     </div>
   );
-};
+});
 
 const Testimonials = () => {
+  const [visibleClients, setVisibleClients] = useState([]);
+
+  useEffect(() => {
+    // Load first 2 clients instantly
+    setVisibleClients(feedback.slice(0, 2));
+
+    // Load remaining after a short delay
+    const timer = setTimeout(() => {
+      setVisibleClients(feedback);
+    }, 300); // You can lower this to 100ms if preferred
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section id='clients' className={`${styles.paddingY} flex flex-col items-center relative`}>
+    <section
+      id="clients"
+      className={`${styles.paddingY} flex flex-col items-center relative`}
+    >
       <div className="absolute z-0 w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient bottom-40" />
+
       <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-10 relative z-10">
-        <h2 className={`${styles.heading2} text-center md:text-left`}>Client Feedback & Project Overview</h2>
-        <p className={`${styles.paragraph} max-w-[500px] mt-6 md:mt-0 text-center md:text-left`}>
-          Here's what our clients have to say about the projects we've delivered and how we collaborate to bring their ideas to life.
+        <h2 className={`${styles.heading2} text-center md:text-left`}>
+          Client Feedback & Project Overview
+        </h2>
+        <p
+          className={`${styles.paragraph} max-w-[500px] mt-6 md:mt-0 text-center md:text-left`}
+        >
+          Here's what our clients have to say about the projects we've delivered
+          and how we collaborate to bring their ideas to life.
         </p>
       </div>
 
       <div className="flex flex-wrap justify-center md:justify-start w-full relative z-10">
-        {feedback.map((client) => (
+        {visibleClients.map((client) => (
           <ClientCard key={client.id} {...client} />
         ))}
       </div>

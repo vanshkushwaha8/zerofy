@@ -1,50 +1,67 @@
-import React, { useState } from 'react'
-import { close, logo, menu } from '../assets'
-import { navLinks } from '../constants'
+import React, { useState } from 'react';
+import { close, logo, menu } from '../assets';
+import { navLinks } from '../constants';
 
 const Navbar = () => {
-
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className='w-full flex py-6 justify-between items-center navbar'>
-      <img src={logo} alt='hoobank' className='w-[124px] h-[32px]'/>
-      <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
+    <nav className="fixed top-0 left-0 z-[1000] w-full backdrop-blur-md bg-black/40 border-b border-white/10 shadow-sm px-6 sm:px-16 py-4 flex justify-between items-center">
+      
+      {/* Logo */}
+      <img
+        src={logo}
+        alt="Zerofy Technologies Logo"
+        className="w-[140px] h-auto max-h-[44px] sm:w-[160px] sm:max-h-[48px] object-contain"
+      />
+
+      {/* Desktop Nav */}
+      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, i) => (
-          <li 
+          <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${i === navLinks.length - 1 ? 'mr-0' : 'mr-10'} text-white mr-10`}
+            className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+              i !== navLinks.length - 1 ? 'mr-10' : ''
+            }`}
           >
-            <a href={`#${nav.id}`}>
-              {nav.title}
-            </a>
-          </li>        
+            <a href={`#${nav.id}`}>{nav.title}</a>
+          </li>
         ))}
       </ul>
-      <div className='sm:hidden flex flex-1 justify-end items-center'>
+
+      {/* Mobile Menu Toggle */}
+      <div className="sm:hidden flex flex-1 justify-end items-center">
         <img
           src={toggle ? close : menu}
-          alt='menu'
-          className='w-[28px] h-[28px] object-contain'
-          onClick={() => setToggle((previous) => !previous)}
+          alt="menu"
+          className="w-[28px] h-[28px] object-contain"
+          onClick={() => setToggle(prev => !prev)}
         />
-        <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
-          <ul className='list-none flex flex-col justify-end items-center flex-1'>
+
+        {/* Mobile Dropdown */}
+        <div
+          className={`${
+            toggle ? 'flex' : 'hidden'
+          } p-6 bg-black/90 backdrop-blur-md absolute top-20 right-4 min-w-[180px] rounded-xl shadow-lg z-50`}
+        >
+          <ul className="list-none flex flex-col justify-end items-center flex-1">
             {navLinks.map((nav, i) => (
-              <li 
+              <li
                 key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] ${i === navLinks.length - 1 ? 'mr-0' : 'mb-4'} text-white mr-10`}
+                className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+                  i !== navLinks.length - 1 ? 'mb-4' : ''
+                }`}
               >
-                <a href={`#${nav.id}`}>
+                <a href={`#${nav.id}`} onClick={() => setToggle(false)}>
                   {nav.title}
                 </a>
-              </li>        
+              </li>
             ))}
           </ul>
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

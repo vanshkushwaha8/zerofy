@@ -4,7 +4,7 @@ import styles, { layout } from '../style';
 const fields = [
   {
     title: 'Full Stack Development',
-    color: 'from-[#1e3c72] to-[#2a5298]',
+    bgColor: 'bg-indigo-700',
     subfields: [
       { name: 'ReactJS + NodeJS', link: 'https://forms.gle/react-node-form' },
       { name: 'Java + Spring Boot', link: 'https://forms.gle/java-springboot-form' },
@@ -16,7 +16,7 @@ const fields = [
   },
   {
     title: 'UI/UX Design',
-    color: 'from-[#ff416c] to-[#ff4b2b]',
+    bgColor: 'bg-pink-700',
     subfields: [
       { name: 'Website Figma Design', link: 'https://forms.gle/figma-design-form' },
       { name: 'Photoshop', link: 'https://forms.gle/photoshop-form' },
@@ -25,16 +25,16 @@ const fields = [
   },
   {
     title: 'AI / Machine Learning',
-    color: 'from-[#56ab2f] to-[#a8e063]',
+    bgColor: 'bg-green-700',
     subfields: [
       { name: 'Python', link: 'https://forms.gle/python-ai-form' },
     ],
   },
 ];
 
-const CareerCard = ({ title, subfields, color, isOpen, onClick }) => (
+const CareerCard = ({ title, subfields, bgColor, isOpen, onClick }) => (
   <div
-    className={`bg-gradient-to-br ${color} text-white p-6 rounded-[24px] shadow-xl w-full max-w-[360px] hover:scale-105 transform transition-transform duration-300`}
+    className={`w-full max-w-[360px] ${bgColor} text-white p-6 rounded-[20px] shadow-md hover:shadow-xl hover:scale-105 transform transition-transform duration-300`}
   >
     <button
       onClick={onClick}
@@ -50,7 +50,7 @@ const CareerCard = ({ title, subfields, color, isOpen, onClick }) => (
               href={field.link}
               target='_blank'
               rel='noopener noreferrer'
-              className='block w-full text-center bg-white text-gray-900 font-medium px-4 py-3 rounded-[12px] hover:bg-gray-100 transition duration-200 shadow-md'
+              className='block w-full text-center bg-white text-gray-900 font-medium px-4 py-3 rounded-[12px] hover:bg-gray-100 transition duration-200 shadow-sm'
             >
               {field.name}
             </a>
@@ -69,16 +69,21 @@ const CareerFields = () => {
   };
 
   return (
-    <section id='career' className={`${layout.section} flex-col px-4 sm:px-10 md:px-16 lg:px-24 bg-[#0d1117]`}>
-      <div className='text-center mb-14'>
-        <h2 className={`${styles.heading2} text-gradient bg-gradient-to-r from-teal-400 to-blue-500 inline-block text-transparent bg-clip-text`}>
+    <section id='career' className={`${layout.section} relative flex-col px-4 sm:px-10 md:px-16 lg:px-24 bg-[#0f172a]`}>
+      {/* Background gradient same as used in Testimonials */}
+      <div className="absolute z-0 w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient bottom-40" />
+
+      <div className='text-center mb-14 relative z-10'>
+        <h2 className={`${styles.heading2} text-white`}>
           Explore Career Tracks
         </h2>
         <p className={`${styles.paragraph} mt-5 max-w-[600px] mx-auto text-gray-300`}>
-          Choose your specialization and launch your future with <span className='text-white font-semibold'>Zerofyme Technologies</span>. Whether you're a coder, designer, or AI enthusiast — we’ve got you covered.
+          Choose your specialization and launch your future with{' '}
+          <span className='text-white font-semibold'>Zerofyme Technologies</span>. Whether you're a coder, designer, or AI enthusiast — we’ve got you covered.
         </p>
       </div>
-      <div className='flex flex-wrap gap-8 justify-center items-start w-full'>
+
+      <div className='flex flex-wrap gap-8 justify-center items-start w-full relative z-10'>
         {fields.map((field, index) => (
           <CareerCard
             key={index}
