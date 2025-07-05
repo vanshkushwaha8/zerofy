@@ -5,6 +5,7 @@ import card from "./card.png";
 import coinbase from "./coinbase.png";
 import dropbox from "./dropbox.png";
 import logo from "./logo.png";
+import logofooter from "./logofooter.png";
 import project1 from "./project1.png";
 import project2 from "./project2.png";
 import quotes from "./quotes.svg";
@@ -36,6 +37,7 @@ import ayesha from "./ayesha.jpg";
 
 export {
   sneha,
+  logofooter,
   vikas,
   rahul,
   ayesha,

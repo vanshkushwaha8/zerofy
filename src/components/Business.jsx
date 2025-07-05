@@ -6,28 +6,28 @@ const fields = [
     title: 'Full Stack Development',
     bgColor: 'bg-indigo-700',
     subfields: [
-      { name: 'ReactJS + NodeJS', link: 'https://forms.gle/react-node-form' },
-      { name: 'Java + Spring Boot', link: 'https://forms.gle/java-springboot-form' },
-      { name: 'Java', link: 'https://forms.gle/java-form' },
+      { name: 'ReactJS + NodeJS', link: 'https://docs.google.com/forms/d/1sJ0TMEZh2chv_OiDMdc_GOpjsGD_JtFq9CkTWiYlwGE/edit' },
+      { name: 'Java + Spring Boot', link: 'https://docs.google.com/forms/d/1sJ0TMEZh2chv_OiDMdc_GOpjsGD_JtFq9CkTWiYlwGE/edit' },
+      { name: 'Java', link: 'https://docs.google.com/forms/d/1sJ0TMEZh2chv_OiDMdc_GOpjsGD_JtFq9CkTWiYlwGE/edit' },
       { name: 'ReactJS', link: 'https://forms.gle/react-form' },
-      { name: 'NodeJS', link: 'https://forms.gle/node-form' },
-      { name: '.NET', link: 'https://forms.gle/dotnet-form' },
+      { name: 'NodeJS', link: 'https://docs.google.com/forms/d/1sJ0TMEZh2chv_OiDMdc_GOpjsGD_JtFq9CkTWiYlwGE/edit' },
+      { name: '.NET', link: 'https://docs.google.com/forms/d/1sJ0TMEZh2chv_OiDMdc_GOpjsGD_JtFq9CkTWiYlwGE/edit' },
     ],
   },
   {
     title: 'UI/UX Design',
     bgColor: 'bg-pink-700',
     subfields: [
-      { name: 'Website Figma Design', link: 'https://forms.gle/figma-design-form' },
-      { name: 'Photoshop', link: 'https://forms.gle/photoshop-form' },
-      { name: 'App Design', link: 'https://forms.gle/app-design-form' },
+      { name: 'Website Figma Design', link: 'https://docs.google.com/forms/d/1sJ0TMEZh2chv_OiDMdc_GOpjsGD_JtFq9CkTWiYlwGE/edit' },
+      { name: 'Photoshop', link: 'https://docs.google.com/forms/d/1sJ0TMEZh2chv_OiDMdc_GOpjsGD_JtFq9CkTWiYlwGE/edit' },
+      { name: 'App Design', link: 'https://docs.google.com/forms/d/1sJ0TMEZh2chv_OiDMdc_GOpjsGD_JtFq9CkTWiYlwGE/edit' },
     ],
   },
   {
     title: 'AI / Machine Learning',
     bgColor: 'bg-green-700',
     subfields: [
-      { name: 'Python', link: 'https://forms.gle/python-ai-form' },
+      { name: 'Python', link: 'https://docs.google.com/forms/d/1sJ0TMEZh2chv_OiDMdc_GOpjsGD_JtFq9CkTWiYlwGE/edit' },
     ],
   },
 ];

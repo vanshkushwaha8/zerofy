@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../style';
-import { logo } from '../assets';
+import { logofooter } from '../assets';
 
 const Footer = () => {
   const [showContact, setShowContact] = useState(false);
@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className={`w-full ${styles.paddingY} px-6 sm:px-16 bg-[#0a0f1c] text-white`}>
       <div className='flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10'>
         <div className='flex flex-col'>
-          <img src={logo} alt='logo' className='w-[200px] h-auto mb-4' />
+          <img src={logofooter} alt='logo' className='w-[200px] h-auto mb-4' />
           <p className='text-dimWhite max-w-sm'>
             Empowering innovation with custom-built software and smart solutions.
           </p>
@@ -42,7 +42,7 @@ const Footer = () => {
             <h4 className='text-lg font-semibold'>HR Mail</h4>
             {showHR && (
               <div className='absolute top-full mt-2 p-4 bg-gray-900 rounded-md shadow-lg text-sm z-10'>
-                hr@zerofyme.in
+                zerofymetechnologies@gmail.com
               </div>
             )}
           </div>
@@ -55,7 +55,7 @@ const Footer = () => {
             <h4 className='text-lg font-semibold'>Management Mail</h4>
             {showManagement && (
               <div className='absolute top-full mt-2 p-4 bg-gray-900 rounded-md shadow-lg text-sm z-10'>
-                management@zerofyme.in
+                zerofymetechnologies@gmail.com
               </div>
             )}
           </div>
@@ -88,7 +88,7 @@ const Footer = () => {
             <h3 className='text-xl font-semibold mb-4'>Latest Blog Video</h3>
             <iframe
               className='w-full h-[300px] rounded-md'
-              src='https://www.youtube.com/embed/dQw4w9WgXcQ'
+              src='6'
               title='Blog Video'
               frameBorder='0'
               allowFullScreen

@@ -6,17 +6,17 @@ const projects = [
   {
     title: 'Cleaner Service',
     description: 'An intuitive platform offering on-demand cleaning services with real-time scheduling, background-verified professionals, and eco-friendly supplies.',
-    image: cleaner,
+    image: kirana,
   },
   {
     title: 'Restaurant Review',
     description: 'Discover and review top-rated restaurants with visual menus, location-based recommendations, and user-submitted ratings and photos.',
-    image: restaurant,
+    image: cleaner,
   },
   {
     title: 'Online Kirana Store',
     description: 'Your personal online grocery assistant offering seamless ordering, local product availability tracking, and instant delivery services.',
-    image: kirana,
+    image:restaurant,
   },
   {
     title: 'Smart Gym Tracker',
